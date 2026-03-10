@@ -2,7 +2,7 @@
 
 # ============================================================
 #  TUIC v5 一键安装脚本
-#  https://github.com/ccj241/tuic-v5-installer
+#  https://github.com/ccj241/tuic
 #
 #  支持系统: Ubuntu / Debian / CentOS (x86_64 / aarch64)
 #  用法:
@@ -42,7 +42,7 @@ check_root() {
 install_command() {
     cat > "$TUIC_CMD" <<'CMDEOF'
 #!/bin/bash
-bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic-v5-installer/main/tuic-installer.sh) "$@"
+bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic/main/tuic-installer.sh) "$@"
 CMDEOF
     chmod 755 "$TUIC_CMD"
 }
@@ -91,7 +91,7 @@ download_tuic() {
     local latest=""
 
     # 优先从自己的镜像仓库获取
-    latest=$(curl -sL "https://api.github.com/repos/ccj241/tuic-v5-installer/releases/latest" \
+    latest=$(curl -sL "https://api.github.com/repos/ccj241/tuic/releases/latest" \
         | jq -r '.tag_name // empty' 2>/dev/null) || true
 
     # 备用: 上游仓库
@@ -113,7 +113,7 @@ download_tuic() {
     # 按优先级尝试多个下载源
     local downloaded=false
     local urls=(
-        "https://github.com/ccj241/tuic-v5-installer/releases/download/$latest/$latest-$server_arch"
+        "https://github.com/ccj241/tuic/releases/download/$latest/$latest-$server_arch"
         "https://github.com/EAimTY/tuic/releases/download/$latest/$latest-$server_arch"
         "https://github.com/tuic-protocol/tuic/releases/download/$latest/$latest-$server_arch"
     )
@@ -180,7 +180,7 @@ setup_service() {
     cat > "$SERVICE_FILE" <<EOF
 [Unit]
 Description=TUIC v5 Server
-Documentation=https://github.com/ccj241/tuic-v5-installer
+Documentation=https://github.com/ccj241/tuic
 After=network.target nss-lookup.target
 
 [Service]

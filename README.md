@@ -33,13 +33,13 @@ A one-click installation & management script for [TUIC v5](https://github.com/EA
 ### Quick Install
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic-v5-installer/main/tuic-installer.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic/main/tuic-installer.sh)
 ```
 
 ### Non-Interactive Install
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic-v5-installer/main/tuic-installer.sh) --auto
+bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic/main/tuic-installer.sh) --auto
 ```
 
 Port and password will be randomly generated.
@@ -127,13 +127,13 @@ journalctl -u tuic -f      # View logs
 ### 一键安装
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic-v5-installer/main/tuic-installer.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic/main/tuic-installer.sh)
 ```
 
 ### 无人值守安装
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic-v5-installer/main/tuic-installer.sh) --auto
+bash <(curl -fsSL https://raw.githubusercontent.com/ccj241/tuic/main/tuic-installer.sh) --auto
 ```
 
 端口和密码将自动随机生成。
