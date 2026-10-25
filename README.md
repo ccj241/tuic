@@ -6,6 +6,26 @@
 
 ---
 
+## Shadowrocket 小火箭配置下载
+
+[下载 AI + MakerWorld 分流去广告配置](https://raw.githubusercontent.com/ccj241/tuic/main/shadowrocket/sr_cnip_ad_ai_makerworld.conf) · [查看配置文件](shadowrocket/sr_cnip_ad_ai_makerworld.conf)
+
+复制下面的地址，在小火箭中选择「配置 → 添加配置 → 粘贴 URL」，下载后选中启用；首页选择自己的代理节点，全局路由选择「配置」。
+
+```text
+https://raw.githubusercontent.com/ccj241/tuic/main/shadowrocket/sr_cnip_ad_ai_makerworld.conf
+```
+
+- 海外 AI 走代理：ChatGPT、Claude、Gemini、Grok、Copilot、Perplexity、Cursor、Midjourney 等。
+- 国内 AI 直连：豆包、DeepSeek、通义、Kimi、智谱等。
+- MakerWorld / Bambu：国内站 `makerworld.com.cn`、`bambulab.cn` 直连，国际站 `makerworld.com`、`bambulab.com` 走代理。
+- Printables、Thingiverse、Cults、MyMiniFactory、Thangs 等海外模型社区走代理。
+- 保留原 `sr_cnip_ad` 国内 IP 直连和去广告规则；配置不含代理节点或密码，使用当前选择的节点。
+
+此配置基于现用规则快照制作，更新地址指向本仓库；上游广告列表不会自动每日同步。
+
+---
+
 <a name="english"></a>
 
 ## English
@@ -196,7 +216,7 @@ journalctl -u tuic -f      # 查看日志
 
 ## License
 
-MIT
+安装脚本采用 MIT 许可。`shadowrocket/sr_cnip_ad_ai_makerworld.conf` 基于 [Johnshall/Shadowrocket-ADBlock-Rules-Forever](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever) 修改，采用 CC BY-SA 4.0；其中引用的 v2fly AI 域名数据采用 MIT 许可，来源及许可已保留在配置文件内。
 
 ## Credits
 
